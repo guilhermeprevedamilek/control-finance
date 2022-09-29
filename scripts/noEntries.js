@@ -24,5 +24,3 @@ function showNoEntriesCard() {
 
   divStamenteEntries.appendChild(createNoEntriesCard());
 }
-
-function hideNoEntriesCard() {}
