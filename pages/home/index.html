@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Control Finance</title>
-    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Control Finance - Seu controle financeiro">
-    <link rel="stylesheet" href="/styles/globalStyles.css">
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Control Finance - Seu controle financeiro"
+    />
+    <link rel="stylesheet" href="/styles/globalStyles.css" />
+    <link rel="stylesheet" href="index.css" />
+    <header>
+      <div class="header-content">
+        <picture class="header-content__logo">
+          <source
+            srcset="/assets/control-finance-logo.avif"
+            type="image/avif"
+          />
+          <source
+            srcset="/assets/control-finance-logo.webp"
+            type="image/webp"
+          />
+          <img
+            src="/assets/control-finance-logo.svg"
+            alt="Logo da Control Finance"
+          />
+        </picture>
+        <button class="button purple">Registrar novo valor</button>
+      </div>
+    </header>
+  </head>
+  <body>
     <main id="app"></main>
     <script src="/scripts/modal.js"></script>
     <script src="valuesData.js"></script>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
