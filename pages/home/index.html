@@ -12,6 +12,11 @@
     />
     <link rel="stylesheet" href="/styles/globalStyles.css" />
     <link rel="stylesheet" href="index.css" />
+
+    <script
+      src="https://kit.fontawesome.com/dc30acdb83.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -30,26 +35,81 @@
             alt="Logo da Control Finance"
           />
         </picture>
-        <button class="button purple">Registrar novo valor</button>
+        <button class="button primary">Registrar novo valor</button>
       </div>
     </header>
     <main id="app">
       <section class="dashboard-header">
         <h2 class="dashboard-header__title">Resumo financeiro</h2>
         <ul class="dashboard-header__dashboard-filters">
-          <label class="button radio" for="all"
+          <label class="button outline" for="all"
             >Todos
-            <input type="radio" id="all" name="filter" class="radio-filter" />
+            <input
+              type="radio"
+              id="all"
+              name="filter"
+              class="radio-filter"
+              checked
+            />
           </label>
-          <label class="button radio" for="in"
+          <label class="button outline" for="in"
             >Entradas
             <input type="radio" id="in" name="filter" class="radio-filter" />
           </label>
-          <label class="button radio" for="out"
+          <label class="button outline" for="out"
             >Saídas
             <input type="radio" id="out" name="filter" class="radio-filter" />
           </label>
         </ul>
+      </section>
+
+      <section class="dashboard-statement">
+        <div class="dashboard-statement__stamente-summary">
+          <h3 class="stamente-summary__title">Soma dos valores</h3>
+
+          <span class="stamente-summary__total">R$ 0,00</span>
+        </div>
+
+        <div class="dashboard-statement__statement-entries">
+          <div class="statement-entries__statement-entry">
+            <span class="statement-entry__value">R$ 0,00</span>
+
+            <div class="statement-entry__informations">
+              <span class="statement-entry__tag">Entrada</span>
+              <button class="button icon">
+                <picture>
+                  <i class="fa-solid fa-trash"></i>
+                </picture>
+              </button>
+            </div>
+          </div>
+
+          <div class="statement-entries__statement-entry">
+            <span class="statement-entry__value">R$ 0,00</span>
+
+            <div class="statement-entry__informations">
+              <span class="statement-entry__tag">Saída</span>
+              <button class="button icon">
+                <picture>
+                  <i class="fa-solid fa-trash"></i>
+                </picture>
+              </button>
+            </div>
+          </div>
+
+          <div class="statement-entries__statement-entry">
+            <span class="statement-entry__value">R$ 0,00</span>
+
+            <div class="statement-entry__informations">
+              <span class="statement-entry__tag">Entrada</span>
+              <button class="button icon">
+                <picture>
+                  <i class="fa-solid fa-trash"></i>
+                </picture>
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <script src="/scripts/modal.js"></script>
