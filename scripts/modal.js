@@ -59,7 +59,7 @@ function createModal() {
 
   inputInput.id = "value";
 
-  inputInput.placeholder = "00,00";
+  inputInput.placeholder = "0,00";
 
   labelLabel.htmlFor = "value";
 
@@ -83,7 +83,9 @@ function createModal() {
 
     inputCategory.value = categoryID;
 
-    inputCategory.checked = true;
+    if (categoryID === 1) {
+      inputCategory.checked = true;
+    }
 
     labelCategory.htmlFor = tagId;
 
@@ -98,6 +100,17 @@ function createModal() {
       closeModal(sectionModalWraper, divModalBox);
     })
   );
+
+  divInputWraper.addEventListener("click", () => {
+    inputInput.focus();
+  });
+
+  inputInput.addEventListener("keyup", () => {
+    formatCurrency(inputInput);
+  });
+  inputInput.addEventListener("blur", () => {
+    formatCurrency(inputInput);
+  });
 
   divButtons.append(buttonCancel, buttonSubmit);
   divCategorySelect.append(pText, divCategoryButtons);
