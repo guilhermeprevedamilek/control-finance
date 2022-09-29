@@ -38,6 +38,18 @@
     border var(--animation-duration) var(--animation-type);
 }
 
+.button.radio {
+  width: fit-content;
+  position: relative;
+}
+
+.button.radio:has(input:checked) {
+  color: var(--color-brand-1);
+
+  background: var(--color-brand-3);
+  border: var(--border-size-1) solid var(--color-brand-1);
+}
+
 @media (min-width: 425px) {
   .button {
     width: fit-content;

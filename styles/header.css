@@ -3,6 +3,9 @@ header {
 }
 
 .header-content {
+  max-width: 1024px;
+  min-height: 109px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,9 +23,6 @@ header {
 
 @media (min-width: 425px) {
   .header-content {
-    max-width: 1024px;
-    min-height: 109px;
-
     flex-direction: row;
     justify-content: space-between;
   }
