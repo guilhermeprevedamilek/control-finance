@@ -1,0 +1,29 @@
+header {
+  background-color: var(--color-grey-5);
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  padding: 28px 16px;
+  margin: 0 auto;
+}
+
+.header-content__logo {
+  width: 153px;
+  height: 24px;
+}
+
+@media (min-width: 425px) {
+  .header-content {
+    max-width: 1024px;
+    min-height: 109px;
+
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
