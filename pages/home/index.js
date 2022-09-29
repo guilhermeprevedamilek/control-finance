@@ -8,3 +8,5 @@
     openModal();
   })
 );
+
+renderEntries();

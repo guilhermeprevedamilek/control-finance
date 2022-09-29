@@ -125,7 +125,8 @@ function createModal() {
       )
       .reduce((acc, { name, value }) => ({ ...acc, [name]: value }), {});
 
-    registerData(formData);
+    createData(formData);
+    renderEntries();
     closeModal(sectionModalWraper, divModalBox);
   });
 
