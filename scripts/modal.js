@@ -105,11 +105,11 @@ function createModal() {
     inputInput.focus();
   });
 
-  inputInput.addEventListener("keyup", () => {
-    formatCurrency(inputInput);
+  inputInput.addEventListener("keyup", (event) => {
+    formatCurrency(event, inputInput);
   });
-  inputInput.addEventListener("blur", () => {
-    formatCurrency(inputInput);
+  inputInput.addEventListener("blur", (event) => {
+    formatCurrency(event, inputInput);
   });
 
   divButtons.append(buttonCancel, buttonSubmit);
