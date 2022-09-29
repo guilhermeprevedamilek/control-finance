@@ -18,6 +18,10 @@
 }
 
 .total-input__input-wraper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
   padding: 12px 16px;
   border-radius: var(--radius-1);
   border: var(--border-size-1) solid var(--color-grey-3);

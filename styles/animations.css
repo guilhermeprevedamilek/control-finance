@@ -17,11 +17,11 @@
 }
 
 @keyframes fadeOut {
-  to {
+  from {
     background: var(--color-grey-1-opacity-5);
   }
 
-  from {
+  to {
     background: transparent;
   }
 }
@@ -33,11 +33,11 @@
 
 @keyframes slideInDown {
   from {
-    transform: translateY(-150%);
+    translate: 0 -100vh;
   }
 
   to {
-    transform: translateY(0);
+    translate: 0;
   }
 }
 
@@ -48,10 +48,10 @@
 
 @keyframes slideOutDown {
   from {
-    transform: translateY(0);
+    translate: 0;
   }
 
   to {
-    transform: translateY(150%);
+    translate: 0 100vh;
   }
 }
