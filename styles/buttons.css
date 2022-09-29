@@ -3,13 +3,11 @@
   height: 32px;
 
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 
-  padding: 0 var(--font-size-3);
-
   border-radius: var(--radius-1);
+  padding: 0 var(--font-size-3);
 
   font-family: var(--font-family-1);
   font-weight: var(--font-weight-1);
@@ -19,35 +17,66 @@
   background: var(--fixed-white);
   border: var(--border-size-1) solid var(--color-grey-5);
 
+  cursor: pointer;
+  white-space: nowrap;
+
   transition: background var(--animation-duration) var(--animation-type),
-    border var(--animation-duration) var(--animation-type);
+    border var(--animation-duration) var(--animation-type),
+    color var(--animation-duration) var(--animation-type);
 }
 
-.button.purple {
+.button.primary {
   color: var(--fixed-white);
 
   background: var(--color-brand-1);
   border: var(--border-size-1) solid var(--color-brand-1);
 }
 
-.button.purple:hover {
+.button.primary:hover {
   background: var(--color-brand-2);
   border: var(--border-size-1) solid var(--color-brand-2);
 
   transition: background var(--animation-duration) var(--animation-type),
-    border var(--animation-duration) var(--animation-type);
+    border var(--animation-duration) var(--animation-type),
+    color var(--animation-duration) var(--animation-type);
 }
 
-.button.radio {
-  width: fit-content;
+.button.icon {
+  padding: 6px 8px;
+  color: var(--color-grey-3);
+}
+
+.button.icon:hover {
+  color: var(--color-grey-2);
+
+  background: var(--color-grey-5);
+  border: var(--border-size-1) solid var(--color-grey-4);
+
+  transition: background var(--animation-duration) var(--animation-type),
+    border var(--animation-duration) var(--animation-type),
+    color var(--animation-duration) var(--animation-type);
+}
+
+.button.outline {
   position: relative;
+
+  width: fit-content;
+
+  transition: background var(--animation-duration) var(--animation-type),
+    border var(--animation-duration) var(--animation-type),
+    color var(--animation-duration) var(--animation-type);
 }
 
-.button.radio:has(input:checked) {
+.button.outline:has(input:checked),
+.button.outline:hover {
   color: var(--color-brand-1);
 
   background: var(--color-brand-3);
   border: var(--border-size-1) solid var(--color-brand-1);
+
+  transition: background var(--animation-duration) var(--animation-type),
+    border var(--animation-duration) var(--animation-type),
+    color var(--animation-duration) var(--animation-type);
 }
 
 @media (min-width: 425px) {

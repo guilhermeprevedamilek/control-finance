@@ -12,8 +12,8 @@ header {
   align-items: center;
   gap: 20px;
 
-  padding: 28px 16px;
   margin: 0 auto;
+  padding: 28px 16px;
 }
 
 .header-content__logo {
