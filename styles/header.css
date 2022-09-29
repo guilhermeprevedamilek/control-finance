@@ -1,5 +1,5 @@
 header {
-  background-color: var(--color-grey-5);
+  background: var(--color-grey-5);
 }
 
 .header-content {

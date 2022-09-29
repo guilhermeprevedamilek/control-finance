@@ -41,26 +41,40 @@
     <main id="app">
       <section class="dashboard-header">
         <h2 class="dashboard-header__title">Resumo financeiro</h2>
-        <ul class="dashboard-header__dashboard-filters">
+        <div class="dashboard-header__dashboard-filters">
           <label class="button outline" for="all"
             >Todos
             <input
               type="radio"
               id="all"
               name="filter"
+              value="all"
               class="radio-filter"
               checked
             />
           </label>
-          <label class="button outline" for="in"
+          <label class="button outline" for="in-filter"
             >Entradas
-            <input type="radio" id="in" name="filter" class="radio-filter" />
+
+            <input
+              type="radio"
+              id="in-filter"
+              name="filter"
+              value="1"
+              class="radio-filter"
+            />
           </label>
-          <label class="button outline" for="out"
+          <label class="button outline" for="out-filter"
             >Saídas
-            <input type="radio" id="out" name="filter" class="radio-filter" />
+            <input
+              type="radio"
+              id="out-filter"
+              name="filter"
+              value="2"
+              class="radio-filter"
+            />
           </label>
-        </ul>
+        </div>
       </section>
 
       <section class="dashboard-statement">
@@ -103,6 +117,70 @@
               </button>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="modal-wraper">
+        <div class="modal-wraper__modal-content">
+          <button class="modal-content__close-button button greylow">X</button>
+          <h3 class="modal-content__title">Registro de valor</h3>
+          <p class="modal-content__description">
+            Digite o valor e em seguida aperte no botão referente ao tipo do
+            valor
+          </p>
+
+          <form class="modal-content__modal-form">
+            <div class="modal-form__total-input">
+              <label class="total-input__label" for="value">Valor</label>
+              <div class="total-input__input-wraper">
+                <span class="input-wraper__prefix">R$</span>
+                <input
+                  class="input-wraper__input"
+                  type="text"
+                  name="value"
+                  id="value"
+                  placeholder="00,00"
+                />
+              </div>
+            </div>
+
+            <div class="modal-form__category-select">
+              <p class="category-select__text">Tipo de valor</p>
+
+              <div class="category-select__category-buttons">
+                <label class="button outline" for="in-category"
+                  >Entrada
+
+                  <input
+                    type="radio"
+                    id="in-category"
+                    name="category"
+                    value="1"
+                    class="radio-filter"
+                    checked
+                  />
+                </label>
+
+                <label class="button outline" for="out-category"
+                  >Saída
+
+                  <input
+                    type="radio"
+                    id="out-category"
+                    name="category"
+                    value="1"
+                    class="radio-filter"
+                  />
+                </label>
+              </div>
+            </div>
+            <div class="modal-form__buttons">
+              <button class="button greylow">Cancelar</button>
+              <button type="submit" class="button primary">
+                Inserir valor
+              </button>
+            </div>
+          </form>
         </div>
       </section>
     </main>
