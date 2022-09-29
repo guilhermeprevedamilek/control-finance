@@ -1,12 +1,13 @@
 .modal-wraper {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
 
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  min-height: 100%;
 
-  padding: 0 16px;
+  padding: 16px;
 
   display: flex;
   justify-content: center;
@@ -15,25 +16,28 @@
   background: var(--color-grey-1-opacity-5);
 }
 
-.modal-wraper__modal-content {
+.modal-wraper__modal-box {
   max-width: 428px;
 
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-
   padding: 30px 24px;
+
   border-radius: var(--radius-1);
 
   background: var(--fixed-white);
 }
 
+.modal-box__modal-content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .modal-content__close-button {
   position: absolute;
-  right: 30px;
-  top: 24px;
+  right: 0;
+  top: 0;
 
   padding: auto 12px;
 
@@ -93,8 +97,9 @@
   gap: 16px;
 }
 
-.modal-form__buttons > button {
+.modal-form__buttons > .button {
   height: 31px;
+  width: 50%;
 }
 
 @media (min-width: 425px) {
@@ -108,11 +113,9 @@
     gap: 12px;
   }
 
-  .category-select__category-buttons .button.outline {
-    width: fit-content;
-  }
-
-  .category-select__text {
+  .category-select__category-buttons .button.outline,
+  .category-select__text,
+  .modal-form__buttons > .button {
     width: fit-content;
   }
 }
