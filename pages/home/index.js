@@ -1,4 +1,10 @@
 /* Desenvolva sua lógica aqui */
-document.querySelector("#register-new-value").addEventListener("click", () => {
-  openModal();
-});
+[
+  ...document.querySelectorAll(
+    "#register-new-value, .statement-entries__empty-entries"
+  ),
+].forEach((tag) =>
+  tag.addEventListener("click", () => {
+    openModal();
+  })
+);

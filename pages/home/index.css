@@ -89,11 +89,21 @@ main {
 
   text-align: center;
 
+  cursor: pointer;
+
   border: var(--border-size-1) dashed var(--color-grey-3);
   border-radius: var(--radius-1);
   padding: 16px;
 
   background: var(--color-grey-5);
+
+  transition: background var(--animation-duration) var(--animation-type);
+}
+
+.statement-entries__empty-entries:hover {
+  background: var(--color-grey-4);
+
+  transition: background var(--animation-duration) var(--animation-type);
 }
 
 .statement-entries__empty-entries > p {
