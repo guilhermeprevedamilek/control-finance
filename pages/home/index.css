@@ -3,6 +3,7 @@
 @import url(../../styles/buttons.css);
 @import url(../../styles/inputs.css);
 @import url(../../styles/modals.css);
+@import url(../..//styles/animations.css);
 
 main {
   max-width: 1024px;
