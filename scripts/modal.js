@@ -63,6 +63,8 @@ function createModal() {
 
   labelLabel.htmlFor = "value";
 
+  inputInput.required = true;
+
   [
     { categoryID: 1, categoryName: "Entrada", tagId: "in-category" },
     { categoryID: 2, categoryName: "Saída", tagId: "out-category" },
@@ -93,6 +95,17 @@ function createModal() {
     divCategoryButtons.append(labelCategory);
   });
 
+  divInputWraper.addEventListener("click", () => {
+    inputInput.focus();
+  });
+
+  inputInput.addEventListener("keyup", (event) => {
+    formatCurrency(event, inputInput);
+  });
+  inputInput.addEventListener("blur", (event) => {
+    formatCurrency(event, inputInput);
+  });
+
   [buttonCloseButton, buttonCancel].forEach((button) =>
     button.addEventListener("click", (event) => {
       event.preventDefault();
@@ -101,15 +114,19 @@ function createModal() {
     })
   );
 
-  divInputWraper.addEventListener("click", () => {
-    inputInput.focus();
-  });
+  formModalForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-  inputInput.addEventListener("keyup", () => {
-    formatCurrency(inputInput);
-  });
-  inputInput.addEventListener("blur", () => {
-    formatCurrency(inputInput);
+    const formData = [...formModalForm]
+      .filter(
+        ({ type, checked, tagName }) =>
+          (type === "radio" && checked) ||
+          (type !== "radio" && tagName === "INPUT")
+      )
+      .reduce((acc, { name, value }) => ({ ...acc, [name]: value }), {});
+
+    registerData(formData);
+    closeModal(sectionModalWraper, divModalBox);
   });
 
   divButtons.append(buttonCancel, buttonSubmit);

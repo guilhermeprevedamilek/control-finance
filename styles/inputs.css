@@ -38,6 +38,8 @@
 }
 
 .input-wraper__input {
+  width: 100%;
+
   border: none;
   outline: none;
 
