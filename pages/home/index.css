@@ -49,7 +49,7 @@ main {
   gap: 40px;
 }
 
-.dashboard-statement__stamente-summary {
+.dashboard-statement__statement-summary {
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -60,8 +60,8 @@ main {
   background-color: var(--color-grey-5);
 }
 
-.stamente-summary__title,
-.stamente-summary__total {
+.statement-summary__title,
+.statement-summary__total {
   height: fit-content;
 
   font-weight: var(--font-weight-2);
@@ -69,15 +69,40 @@ main {
   color: var(--color-grey-1);
 }
 
-.stamente-summary__title {
+.statement-summary__title {
   white-space: nowrap;
 }
 
-.stamente-summary__total {
+.statement-summary__total {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   direction: rtl;
+}
+
+.statement-entries__empty-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  text-align: center;
+
+  border: var(--border-size-1) dashed var(--color-grey-3);
+  border-radius: var(--radius-1);
+  padding: 16px;
+
+  background-color: var(--color-grey-5);
+}
+
+.statement-entries__empty-entries > p {
+  font-weight: var(--font-weight-2);
+  font-size: var(--font-size-2);
+  color: var(--color-grey-2);
+}
+
+.statement-entries__empty-entries > p > strong {
+  font-weight: var(--font-weight-1);
+  color: var(--color-grey-1);
 }
 
 .dashboard-statement__statement-entries {
@@ -95,6 +120,14 @@ main {
   border-radius: var(--radius-1);
   border: var(--border-size-1) solid var(--color-grey-5);
   padding: 8px 16px;
+
+  transition: border var(--animation-duration) var(--animation-type);
+}
+
+.statement-entries__statement-entry:hover {
+  border: var(--border-size-1) solid var(--color-brand-1);
+
+  transition: border var(--animation-duration) var(--animation-type);
 }
 
 .statement-entry__value {
