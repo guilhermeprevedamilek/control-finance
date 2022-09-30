@@ -35,28 +35,35 @@ function createEntryCard({ id, value, categoryID }) {
   return divStatementEntry;
 }
 
-function renderEntries() {
-  if (!!insertedValues.length) {
+function renderEntries(filterID = "all") {
+  const filteredData =
+    filterID === "all"
+      ? insertedValues
+      : insertedValues.filter(
+          ({ categoryID }) => Number(filterID) === categoryID
+        );
+
+  if (!!filteredData.length) {
     const statementEntries = document.querySelector(
       ".dashboard-statement__statement-entries"
     );
 
     statementEntries.innerHTML = "";
 
-    insertedValues.forEach((value) => {
+    filteredData.forEach((value) => {
       statementEntries.append(createEntryCard(value));
     });
   } else {
     showNoEntriesCard();
   }
 
-  updateSummary();
+  updateSummary(filteredData);
 }
 
-function updateSummary(referenceArray = insertedValues) {
+function updateSummary(dataArray) {
   const statementSummary = document.querySelector(".statement-summary__total");
 
-  const reducedValues = referenceArray.reduce(
+  const reducedValues = dataArray.reduce(
     (acc, current) => acc + current.value,
     0
   );
