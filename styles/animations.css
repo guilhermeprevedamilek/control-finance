@@ -1,10 +1,16 @@
-.fadeIn {
-  animation: fadeIn var(--animation-duration) var(--animation-type) forwards;
+@-webkit-keyframes fadeIn {
+  0% {
+    background: 0 0;
+  }
+
+  to {
+    background: var(--color-grey-1-opacity-5);
+  }
 }
 
 @keyframes fadeIn {
-  from {
-    background: transparent;
+  0% {
+    background: 0 0;
   }
 
   to {
@@ -12,28 +18,29 @@
   }
 }
 
-.fadeOut {
-  animation: fadeOut var(--animation-duration) var(--animation-type) forwards;
+@-webkit-keyframes fadeOut {
+  0% {
+    background: var(--color-grey-1-opacity-5);
+  }
+
+  to {
+    background: 0 0;
+  }
 }
 
 @keyframes fadeOut {
-  from {
+  0% {
     background: var(--color-grey-1-opacity-5);
   }
 
   to {
-    background: transparent;
+    background: 0 0;
   }
 }
 
-.slideInDown {
-  animation: slideInDown var(--animation-duration) var(--animation-type)
-    forwards;
-}
-
-@keyframes slideInDown {
-  from {
-    translate: 0 -100vh;
+@-webkit-keyframes slideInDown {
+  0% {
+    translate: 0-100vh;
   }
 
   to {
@@ -41,17 +48,58 @@
   }
 }
 
-.slideOutDown {
-  animation: slideOutDown var(--animation-duration) var(--animation-type)
-    forwards;
+@keyframes slideInDown {
+  0% {
+    translate: 0-100vh;
+  }
+
+  to {
+    translate: 0;
+  }
 }
 
-@keyframes slideOutDown {
-  from {
+@-webkit-keyframes slideOutDown {
+  0% {
     translate: 0;
   }
 
   to {
     translate: 0 100vh;
   }
+}
+
+@keyframes slideOutDown {
+  0% {
+    translate: 0;
+  }
+
+  to {
+    translate: 0 100vh;
+  }
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn var(--animation-duration) var(--animation-type)
+    forwards;
+  animation: fadeIn var(--animation-duration) var(--animation-type) forwards;
+}
+
+.fadeOut {
+  -webkit-animation: fadeOut var(--animation-duration) var(--animation-type)
+    forwards;
+  animation: fadeOut var(--animation-duration) var(--animation-type) forwards;
+}
+
+.slideInDown {
+  -webkit-animation: slideInDown var(--animation-duration) var(--animation-type)
+    forwards;
+  animation: slideInDown var(--animation-duration) var(--animation-type)
+    forwards;
+}
+
+.slideOutDown {
+  -webkit-animation: slideOutDown var(--animation-duration)
+    var(--animation-type) forwards;
+  animation: slideOutDown var(--animation-duration) var(--animation-type)
+    forwards;
 }
