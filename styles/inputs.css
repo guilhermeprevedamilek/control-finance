@@ -6,31 +6,39 @@
   width: 0;
 }
 
-.modal-form__total-input,
-.category-select__text {
+.category-select__text,
+.modal-form__total-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 8px;
-
   font-weight: var(--font-weight-2);
   font-size: var(--font-size-3);
   color: var(--color-grey-1);
 }
 
 .total-input__input-wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 12px;
-
   padding: 12px 16px;
   border-radius: var(--radius-1);
   border: var(--border-size-1) solid var(--color-grey-3);
-
   cursor: text;
-
+  -webkit-transition: border var(--animation-duration) var(--animation-type);
+  -o-transition: border var(--animation-duration) var(--animation-type);
   transition: border var(--animation-duration) var(--animation-type);
 }
 
+.input-wraper__input,
 .input-wraper__prefix {
   font-weight: var(--font-weight-2);
   font-size: var(--font-size-3);
@@ -39,25 +47,24 @@
 
 .input-wraper__input {
   width: 100%;
-
-  border: none;
-  outline: none;
-
+  border: 0;
+  outline: 0;
   font-weight: var(--font-weight-3);
-  font-size: var(--font-size-3);
-  color: var(--color-grey-2);
-
+  -webkit-transition: color var(--animation-duration) var(--animation-type);
+  -o-transition: color var(--animation-duration) var(--animation-type);
   transition: color var(--animation-duration) var(--animation-type);
 }
 
 .input-wraper__input:focus {
   color: var(--color-grey-1);
-
+  -webkit-transition: color var(--animation-duration) var(--animation-type);
+  -o-transition: color var(--animation-duration) var(--animation-type);
   transition: color var(--animation-duration) var(--animation-type);
 }
 
 .total-input__input-wraper:has(input:focus) {
   border: var(--border-size-1) solid var(--color-brand-1);
-
+  -webkit-transition: border var(--animation-duration) var(--animation-type);
+  -o-transition: border var(--animation-duration) var(--animation-type);
   transition: border var(--animation-duration) var(--animation-type);
 }
