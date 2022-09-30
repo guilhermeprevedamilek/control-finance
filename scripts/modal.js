@@ -1,5 +1,8 @@
-/* Desenvolva sua lógica aqui */
-function createModal() {
+import { formatCurrency } from "./utils.js";
+import { createData } from "./valuesData.controller.js";
+import { renderEntries } from "./entries.js";
+
+export function createModal() {
   const sectionModalWraper = document.createElement("section");
   const divModalBox = document.createElement("div");
   const divModalContent = document.createElement("div");
@@ -147,7 +150,7 @@ function createModal() {
   return sectionModalWraper;
 }
 
-function openModal() {
+export function openModal() {
   document.body.append(createModal());
 }
 

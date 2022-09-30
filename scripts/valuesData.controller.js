@@ -1,4 +1,6 @@
-function createData({ value, category: categoryID }) {
+import { insertedValues } from "../pages/home/valuesData.js";
+
+export function createData({ value, category: categoryID }) {
   categoryID = Number(categoryID);
 
   const formattedData = {
@@ -10,7 +12,7 @@ function createData({ value, category: categoryID }) {
   insertedValues.push(formattedData);
 }
 
-function deleteData(deleteId) {
+export function deleteData(deleteId) {
   const deleteIndex = insertedValues.findIndex(({ id }) => id === deleteId);
 
   if (deleteIndex >= 0) {

@@ -1,3 +1,7 @@
+import { valuesCategory, insertedValues } from "../pages/home/valuesData.js";
+import { deleteData } from "./valuesData.controller.js";
+import { showNoEntriesCard } from "./noEntries.js";
+
 function createEntryCard({ id, value, categoryID }) {
   const divStatementEntry = document.createElement("div");
   const spanValue = document.createElement("span");
@@ -35,7 +39,7 @@ function createEntryCard({ id, value, categoryID }) {
   return divStatementEntry;
 }
 
-function renderEntries(filterID = "all") {
+export function renderEntries(filterID = "all") {
   const filteredData =
     filterID === "all"
       ? insertedValues
