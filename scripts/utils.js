@@ -5,7 +5,7 @@ function formatNumber(number) {
     .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
-function formatCurrency({ type: eventType }, input) {
+export function formatCurrency({ type: eventType }, input) {
   if (input.value === "") {
     return;
   }

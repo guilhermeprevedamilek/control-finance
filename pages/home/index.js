@@ -1,4 +1,6 @@
-/* Desenvolva sua lógica aqui */
+import { openModal } from "../../scripts/modal.js";
+import { renderEntries } from "../../scripts/entries.js";
+
 document.querySelector("#register-new-value").addEventListener("click", () => {
   openModal();
 });

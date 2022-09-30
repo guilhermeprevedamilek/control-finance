@@ -19,7 +19,7 @@ function createNoEntriesCard() {
   return divEmptyEntries;
 }
 
-function showNoEntriesCard() {
+export function showNoEntriesCard() {
   const divStamenteEntries = document.querySelector(
     ".dashboard-statement__statement-entries"
   );
