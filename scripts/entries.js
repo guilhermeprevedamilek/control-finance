@@ -49,4 +49,20 @@ function renderEntries() {
   } else {
     showNoEntriesCard();
   }
+
+  updateSummary();
+}
+
+function updateSummary(referenceArray = insertedValues) {
+  const statementSummary = document.querySelector(".statement-summary__total");
+
+  const reducedValues = referenceArray.reduce(
+    (acc, current) => acc + current.value,
+    0
+  );
+
+  statementSummary.innerText = reducedValues.toLocaleString("pt-br", {
+    style: "currency",
+    currency: "BRL",
+  });
 }
