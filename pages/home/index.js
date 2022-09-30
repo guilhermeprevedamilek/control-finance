@@ -1,11 +1,13 @@
 /* Desenvolva sua lógica aqui */
+document.querySelector("#register-new-value").addEventListener("click", () => {
+  openModal();
+});
+
 [
-  ...document.querySelectorAll(
-    "#register-new-value, .statement-entries__empty-entries"
-  ),
+  ...document.querySelectorAll(".dashboard-header__dashboard-filters input"),
 ].forEach((tag) =>
-  tag.addEventListener("click", () => {
-    openModal();
+  tag.addEventListener("change", (event) => {
+    renderEntries(tag.value);
   })
 );
 

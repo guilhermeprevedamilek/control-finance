@@ -12,6 +12,10 @@ function createNoEntriesCard() {
   pWithStrong.appendChild(strong);
   divEmptyEntries.append(pWithStrong, p);
 
+  divEmptyEntries.addEventListener("click", () => {
+    openModal();
+  });
+
   return divEmptyEntries;
 }
 
