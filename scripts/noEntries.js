@@ -1,3 +1,5 @@
+import { openModal } from "./modal.js";
+
 function createNoEntriesCard() {
   const divEmptyEntries = document.createElement("div");
   const pWithStrong = document.createElement("p");
