@@ -1,25 +1,31 @@
 .button {
   width: 100%;
   height: 32px;
-
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-
   border-radius: var(--radius-1);
   padding: 0 var(--font-size-3);
-
   font-family: var(--font-family-1);
   font-weight: var(--font-weight-1);
   font-size: var(--font-size-3);
   color: var(--color-grey-2);
-
   background: var(--fixed-white);
   border: var(--border-size-1) solid var(--color-grey-5);
-
   cursor: pointer;
   white-space: nowrap;
-
+  -webkit-transition: background var(--animation-duration) var(--animation-type),
+    border var(--animation-duration) var(--animation-type),
+    color var(--animation-duration) var(--animation-type);
+  -o-transition: background var(--animation-duration) var(--animation-type),
+    border var(--animation-duration) var(--animation-type),
+    color var(--animation-duration) var(--animation-type);
   transition: background var(--animation-duration) var(--animation-type),
     border var(--animation-duration) var(--animation-type),
     color var(--animation-duration) var(--animation-type);
@@ -27,7 +33,6 @@
 
 .button.primary {
   color: var(--fixed-white);
-
   background: var(--color-brand-1);
   border: var(--border-size-1) solid var(--color-brand-1);
 }
@@ -35,10 +40,6 @@
 .button.primary:hover {
   background: var(--color-brand-2);
   border: var(--border-size-1) solid var(--color-brand-2);
-
-  transition: background var(--animation-duration) var(--animation-type),
-    border var(--animation-duration) var(--animation-type),
-    color var(--animation-duration) var(--animation-type);
 }
 
 .button.icon {
@@ -46,53 +47,65 @@
   color: var(--color-grey-3);
 }
 
-.button.icon:hover {
-  color: var(--color-grey-2);
-
-  background: var(--color-grey-5);
-  border: var(--border-size-1) solid var(--color-grey-4);
-
+.button.icon:hover,
+.button.outline,
+.button.primary:hover {
+  -webkit-transition: background var(--animation-duration) var(--animation-type),
+    border var(--animation-duration) var(--animation-type),
+    color var(--animation-duration) var(--animation-type);
+  -o-transition: background var(--animation-duration) var(--animation-type),
+    border var(--animation-duration) var(--animation-type),
+    color var(--animation-duration) var(--animation-type);
   transition: background var(--animation-duration) var(--animation-type),
     border var(--animation-duration) var(--animation-type),
     color var(--animation-duration) var(--animation-type);
 }
 
+.button.icon:hover {
+  color: var(--color-grey-2);
+  background: var(--color-grey-5);
+  border: var(--border-size-1) solid var(--color-grey-4);
+}
+
 .button.outline {
   position: relative;
-
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
-
-  transition: background var(--animation-duration) var(--animation-type),
-    border var(--animation-duration) var(--animation-type),
-    color var(--animation-duration) var(--animation-type);
 }
 
 .button.outline:has(input:checked),
 .button.outline:hover {
   color: var(--color-brand-1);
-
   background: var(--color-brand-3);
   border: var(--border-size-1) solid var(--color-brand-1);
-
+  -webkit-transition: background var(--animation-duration) var(--animation-type),
+    border var(--animation-duration) var(--animation-type),
+    color var(--animation-duration) var(--animation-type);
+  -o-transition: background var(--animation-duration) var(--animation-type),
+    border var(--animation-duration) var(--animation-type),
+    color var(--animation-duration) var(--animation-type);
   transition: background var(--animation-duration) var(--animation-type),
     border var(--animation-duration) var(--animation-type),
     color var(--animation-duration) var(--animation-type);
 }
 
 .button.greylow {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
-
   background: var(--color-grey-5);
 }
 
 .button.greylow:hover {
   color: var(--color-grey-1);
-
   background: var(--color-grey-4);
 }
 
 @media (min-width: 425px) {
   .button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
   }
 }
