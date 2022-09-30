@@ -39,12 +39,16 @@ function createEntryCard({ id, value, categoryID }) {
   return divStatementEntry;
 }
 
-export function renderEntries(filterID = "all") {
+export function renderEntries() {
+  const dashboardFilter = document.querySelector(
+    ".dashboard-header__dashboard-filters input:checked"
+  ).value;
+
   const filteredData =
-    filterID === "all"
+    dashboardFilter === "all"
       ? insertedValues
       : insertedValues.filter(
-          ({ categoryID }) => Number(filterID) === categoryID
+          ({ categoryID }) => Number(dashboardFilter) === categoryID
         );
 
   if (!!filteredData.length) {
