@@ -1,0 +1,57 @@
+.fadeIn {
+  animation: fadeIn var(--animation-duration) var(--animation-type) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    background: transparent;
+  }
+
+  to {
+    background: var(--color-grey-1-opacity-5);
+  }
+}
+
+.fadeOut {
+  animation: fadeOut var(--animation-duration) var(--animation-type) forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    background: var(--color-grey-1-opacity-5);
+  }
+
+  to {
+    background: transparent;
+  }
+}
+
+.slideInDown {
+  animation: slideInDown var(--animation-duration) var(--animation-type)
+    forwards;
+}
+
+@keyframes slideInDown {
+  from {
+    translate: 0 -100vh;
+  }
+
+  to {
+    translate: 0;
+  }
+}
+
+.slideOutDown {
+  animation: slideOutDown var(--animation-duration) var(--animation-type)
+    forwards;
+}
+
+@keyframes slideOutDown {
+  from {
+    translate: 0;
+  }
+
+  to {
+    translate: 0 100vh;
+  }
+}
